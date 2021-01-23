@@ -17,7 +17,7 @@
       .left_bar{
         background-color: #000;
         color: #FFF;
-        height: 1100px;
+        height: 1200px;
         text-align: justify;
       }
 
@@ -26,6 +26,7 @@
       }
 
       .text_left{
+        margin-left: 20px;
         padding: 10px;
       }
 
@@ -63,6 +64,36 @@
       .glyphicon, .fa{
         font-size: 20px;
       }
+
+      .en {
+        display: none;
+      }
+      h3 {
+        margin-top: 30px;
+        margin-bottom: -10px;
+      }
+      .bar {
+          height: 20px;
+          position: relative;
+          background: #FFF;
+          overflow: hidden;
+      }
+
+      .bar span {
+          display: block;
+          height: 100%;
+      }
+
+      .progress {
+          background: #777;
+          animation: progressBar 3s ease-in-out;
+          animation-fill-mode:both;
+      }
+
+      @keyframes progressBar {
+        0% { width: 0; }
+        100% { width: 100%; }
+      }
     </style>
   </head>
   <body>
@@ -71,36 +102,41 @@
         <br>
       <div class='top_left_bar'>
         <img src='https://media-exp1.licdn.com/dms/image/C5603AQGrodsbdZ17ig/profile-displayphoto-shrink_200_200/0/1516874298119?e=1615420800&v=beta&t=g9yc6O5hnsu_9CCnf_raAtB6pPwrufMhSWFo0vOx19U' alt=''>
-        <!-- <img src='https://scontent.fcgh2-1.fna.fbcdn.net/v/t1.0-9/106296613_3145865928823556_1816319839020366627_n.jpg?_nc_cat=100&_nc_sid=85a577&_nc_ohc=BhjV4v6iRAAAX_vX6rG&_nc_ht=scontent.fcgh2-1.fna&oh=90b3a1cd4e7a7de30ffcb699c7e9f100&oe=5F90A551' alt=''> -->
         <h2>
           <i>Carlos da S. Medeiros</i>
         </h2>
-        <h3>Desenvolvedor Sr.</h3>
+        <h3 class="pt-br">Desenvolvedor Ruby.</h3>
+        <h3 class="en">Ruby Developer.</h3>
       </div>
-
         <div class='text_left'>
-          <h3>Sobre mim:</h3>
+          <!-- <h3>Sobre mim:</h3>
           <hr>
           Meu nome é Carlos, tenho 25 anos, nasci e moro em Osasco-SP.
           Sou formado pela Fatec-Osasco, em Redes de computadores.
           Sou Programador Ruby on Rails desde 2016, como programador desenvolvi um sistema, de monitoramento de ativos de rede, utilizando o protocolo SNMP, para o meu TCC da Faculdade, o mesmo esta disponível para consulta no github.
 
-          <br>
-
-          <h3>Objetivos:</h3>
-          <hr>
-          Procuro novos desafios profissionais,
-          tendo o  desenvolvimento de minhas habilidades e a geração de resultados como objetivo,
-          viabilizando um crescimento qualitativo e quantitativo para o desenvolvimento da empresa e o meu desenvolvimento pessoal.
-
-          <br>
-
-          <h3>Contatos:</h3>
+          <br> -->
+            <h3 class="pt-br">Objetivos:</h3>
+            <h3 class="en">Objectives</h3>
+            <hr>
+            <div class="pt-br">
+              Procuro novos desafios profissionais,
+              tendo o  desenvolvimento de minhas habilidades e a geração de resultados como objetivo,
+              viabilizando um crescimento qualitativo e quantitativo para o desenvolvimento da empresa e o meu desenvolvimento pessoal.
+            </div>
+            <div class="en">
+              I'm looking for new professional challenges,
+              with the development of my skills and the generation of results as an objective,
+              enabling a qualitative and quantitative growth for the development of the company and my personal development.
+            </div>
+            <br>
+          <h3 class="pt-br">Contatos:</h3>
+          <h3 class="en">Contacts:</h3>
           <hr>
           <span class='glyphicon glyphicon-envelope'></span>&nbsp carlos.medeiros.sa@gmail.com
           <br>
           <a href='https://api.whatsapp.com/qr/VAMLFPBFUZ7OL1' target = '_blank'>
-            <span class='fa fa-whatsapp'></span>&nbsp (11)98739-0125
+            <span class='fa fa-whatsapp'></span>&nbsp +55 11 98739-0125
           </a><br>
           <a href='https://github.com/kallsmedeiros' target = '_blank'>
             <span class='fa fa-github'></span>&nbsp https://github.com/kallsmedeiros
@@ -112,22 +148,32 @@
             <span class='glyphicon glyphicon-map-marker'></span>&nbsp R. Vicente Borges do Rêgo Pavão, Cipava, Osasco-SP
           </a><br>
         </div>
-
       </div>
       <div class='col-md-9'>
         <div class='row'>
           <div class='col-md-6'>
-            <h3>Formação acadêmica</h3>
+            <h3 class="pt-br">Formação acadêmica</h3>
+            <h3 class="en">Academic training</h3>
           </div>
-          <div class='col-md-6'>
-            <h3>Cursos</h3>
+          <div class='col-md-4'>
+            <h3 class="pt-br">Cursos</h3>
+            <h3 class="en">Courses</h3>
+          </div>
+          <div class='col-md-2'>
+            <select class="form-select" id="language" style="margin-top: 10px;">
+              <option value="PT-BR" selected>Português(Brasil)</option>
+              <option value="EN">English</option>
+            </select>
           </div>
         </div>
         <hr>
         <div class='row'>
           <div class='col-md-6'>
             <div class='col-md-8'>
-              <b>Ensino médio (concluído)</b>
+              <b>
+                <span class="pt-br">Ensino médio (concluído)</span>
+                <span class="en">High school (concluded)</span>
+              </b>
             </div>
             <div class='col-md-4 pull-right'>
               <b>2013</b>
@@ -137,20 +183,26 @@
               <br>
               <br>
             </div>
-
             <div class='col-md-8'>
-              <b>Redes de Computadores (concluído)</b>
+              <b>
+                <span class="pt-br">Redes de Computadores (concluído)</span>
+                <span class="en">Computer network (concluded)</span>
+              </b>
             </div>
             <div class='col-md-4 pull-right'>
               <b>2018</b>
             </div>
             <div class='col-md-12'>
-              Faculdade de Tecnologia de Osasco (Fatec)
+              <span class="pt-br">Faculdade de Tecnologia de Osasco (Fatec)</span>
+              <span class="en">Faculty of Technology of Osasco (Fatec)</span>
             </div>
           </div>
           <div class='col-md-6'>
             <div class='col-md-8'>
-              <b>Excel 2010 (concluído)</b>
+              <b>
+                <span class="pt-br">Excel 2010 (concluído)</span>
+                <span class="en">Excel 2010 (completed)</span>
+              </b>
             </div>
             <div class='col-md-4 pull-right'>
               <b>2012</b>
@@ -160,7 +212,10 @@
               <br>
             </div>
             <div class='col-md-8'>
-              <b>Adobe Photoshop (concluído)</b>
+              <b>
+                <span class="pt-br">Adobe Photoshop (concluído)</span>
+                <span class="en">Adobe Photoshop (completed)</span>
+              </b>
             </div>
             <div class='col-md-4 pull-right'>
               <b>2014</b>
@@ -170,7 +225,10 @@
               <br>
             </div>
             <div class='col-md-8'>
-              <b>Autodesk Maya (concluído)</b>
+              <b>
+                <span class="pt-br">Autodesk Maya (concluído)</span>
+                <span class="en">Autodesk Maya (completed)</span>
+              </b>
             </div>
             <div class='col-md-4 pull-right'>
               <b>2014</b>
@@ -180,7 +238,10 @@
               <br>
             </div>
             <div class='col-md-8'>
-              <b>Técnico em Informática (concluído)</b>
+              <b>
+                <span class="pt-br">Técnico em Informática (concluído)</span>
+                <span class="en">Computer Technician (completed)</span>
+              </b>
             </div>
             <div class='col-md-4 pull-right'>
               <b>2014</b>
@@ -190,7 +251,10 @@
               <br>
             </div>
             <div class='col-md-8'>
-              <b>Cisco IT Essentials 5.0 (concluído)</b>
+              <b>
+                <span class="pt-br">Cisco IT Essentials 5.0 (concluído)</span>
+                <span class="en">Cisco IT Essentials 5.0 (completed)</span>
+              </b>
             </div>
             <div class='col-md-4 pull-right'>
               <b>2014</b>
@@ -200,7 +264,10 @@
               <br>
             </div>
             <div class='col-md-8'>
-              <b>Bootstrap: Design Responsivo (não concluído)</b>
+              <b>
+                <span class="pt-br">Bootstrap: Design Responsivo (não concluído)</span>
+                <span class="en">Bootstrap: Responsive Design (not completed)</span>
+              </b>
             </div>
             <div class='col-md-4 pull-right'>
               <b>2017</b>
@@ -213,10 +280,12 @@
         </div>
         <div class='row'>
           <div class='col-md-6'>
-            <h3>Experência</h3>
+            <h3 class="pt-br">Experiência</h3>
+            <h3 class="en">Experience</h3>
           </div>
           <div class='col-md-6'>
-            <h3>Competências / Especialidades</h3>
+            <h3 class="pt-br">Competências / Especialidades</h3>
+            <h3 class="en">Skills / Specialties</h3>
           </div>
         </div>
         <hr>
@@ -225,19 +294,26 @@
             <div class='row'>
               <div class='col-md-12'>
                 <div class='col-md-4'>
-                  <b>Período:</b>
+                  <b>
+                    <span class="pt-br">Período:</span>
+                    <span class="en">Period:</span>
+                  </b>
                 </div>
                 <div class='col-md-8'>
-                  De fevereiro de 2016 até outubro de 2016 (9 meses)
+                  <span class="pt-br">De fevereiro de 2016 até outubro de 2016 (9 meses)</span>
+                  <span class="en">February 2016 to October 2016 (9 months)</span>
                 </div>
 
                 <div class='col-md-4'>
-                  <b>Cargo:</b>
+                  <b>
+                    <span class="pt-br">Cargo:</span>
+                    <span class="en">Office:</span>
+                  </b>
                 </div>
                 <div class='col-md-8'>
-                  Estagiário (Programador Ruby)
+                  <span class="pt-br">Estagiário (Programador Ruby)</span>
+                  <span class="en">Intern (Ruby Programmer)</span>
                 </div>
-
                 <div class='col-md-4'>
                   <b>Local:</b>
                 </div>
@@ -245,12 +321,22 @@
                   Data Tecnologia da Informacao LTDA - Osasco-SP
                 </div>
                 <div class='col-md-12'>
-                  <b>Atividades Desenvolvidas:</b>
+                  <b>
+                    <span class="pt-br">Atividades Desenvolvidas:</span>
+                    <span class="en">Developed activities:</span>
+                  </b>
                 </div>
                 <div class='col-md-12'>
-                  Desenvolvimento e Manutenção de código fonte do framework ruby on rails para
-                  sistema Web e sites. Controle de Versões com Git. Testes unitário para aplicação.
-                  Suporte ao Usuário. Manutenção aos equipamentos da empresa.
+                  <span class="pt-br">
+                    Desenvolvimento e Manutenção de código fonte do framework ruby on rails para
+                    sistema Web e sites. Controle de Versões com Git. Testes unitário para aplicação.
+                    Suporte ao Usuário. Manutenção aos equipamentos da empresa.
+                  </span>
+                  <span class="en">
+                    Development and maintenance of the source code of the ruby on rails framework for
+                    Web system and websites. Version Control with Git. Unit tests for application.
+                    User support. Maintenance of company equipment.
+                  </span>
                 </div>
               </div>
             </div>
@@ -259,31 +345,42 @@
             <div class='row'>
               <div class='col-md-12'>
                 <div class='col-md-4'>
-                  <b>Período:</b>
+                  <b>
+                    <span class="pt-br">Período:</span>
+                    <span class="en">Period:</span>
+                  </b>
                 </div>
                 <div class='col-md-8'>
-                  De agosto de 2017 até dezembro de 2017 (4 meses)
+                  <span class="pt-br">De agosto de 2017 até dezembro de 2017 (4 meses)</span>
+                  <span class="en">August 2017 to December 2017 (4 months)</span>
                 </div>
 
                 <div class='col-md-4'>
-                  <b>Cargo:</b>
+                  <b>
+                    <span class="pt-br">Cargo:</span>
+                    <span class="en">Office:</span>
+                  </b>
                 </div>
                 <div class='col-md-8'>
-                  Desenvolvedor Jr.
+                  <span class="pt-br">Desenvolvedor.</span>
+                  <span class="en">Developer.</span>
                 </div>
 
                 <div class='col-md-4'>
                   <b>Local:</b>
                 </div>
                 <div class='col-md-8'>
-                  Knowe.co - Sé-SP
+                  Knowe.co - São Paulo-SP
                 </div>
                 <div class='col-md-12'>
-                  <b>Atividades Desenvolvidas:</b>
+                  <b>
+                    <span class="pt-br">Atividades Desenvolvidas:</span>
+                    <span class="en">Developed activities:</span>
+                  </b>
                 </div>
                 <div class='col-md-12'>
-                  Desenvolvimento e Manutenção de código fonte do framework ruby on rails para
-                  plataforma, aplicação de layout novo. Controle de Versões com Git.
+                  Development and maintenance of the source code of the ruby on rails framework for
+                  platform, new layout application. Version Control with Git.
                 </div>
               </div>
             </div>
@@ -292,17 +389,25 @@
             <div class='row'>
               <div class='col-md-12'>
                 <div class='col-md-4'>
-                  <b>Período:</b>
+                  <b>
+                    <span class="pt-br">Período:</span>
+                    <span class="en">Period:</span>
+                  </b>
                 </div>
                 <div class='col-md-8'>
-                  De janeiro de 2018 até hoje
+                  <span class="pt-br">De janeiro de 2018 até hoje</span>
+                  <span class="en">January 2018 to today</span>
                 </div>
 
                 <div class='col-md-4'>
-                  <b>Cargo:</b>
+                  <b>
+                    <span class="pt-br">Cargo:</span>
+                    <span class="en">Office:</span>
+                  </b>
                 </div>
                 <div class='col-md-8'>
-                  Desenvolvedor Jr.
+                  <span class="pt-br">Desenvolvedor.</span>
+                  <span class="en">Developer.</span>
                 </div>
 
                 <div class='col-md-4'>
@@ -312,11 +417,26 @@
                   Lab360 - Barueri-SP
                 </div>
                 <div class='col-md-12'>
-                  <b>Atividades Desenvolvidas:</b>
+                  <b>
+                    <span class="pt-br">Atividades Desenvolvidas:</span>
+                    <span class="en">Developed activities:</span>
+                  </b>
                 </div>
                 <div class='col-md-12'>
-                  Desenvolvimento e Manutenção de código fonte do framework ruby on rails para
-                  multiplas aplicações e mantendo a escalabilidade da mesmas, aplicação de layout novo customizável. Controle de Versões com Git.
+                  <span class="pt-br">
+                    Desenvolvimento e Manutenção de código fonte do framework ruby on rails para
+                    multiplas aplicações incluindo desenvolvimento de sistema de pagamentos de comissões e
+                    integração com bancos através de CNABs
+                    além de manter estabilidade e a escalabilidade da aplicações.
+                    Aplicação de layout novo customizável. Controle de Versões com Git.
+                  </span>
+                  <span class="en">
+                    Development and maintenance of the source code of the ruby on rails framework for
+                    multiple applications including development of commission payment system and
+                    integration with banks through CNABs
+                    in addition to maintaining application stability and scalability.
+                    New customizable layout application. Version Control with Git.
+                  </span>
                 </div>
               </div>
             </div>
@@ -324,247 +444,238 @@
           <div class='col-md-6'>
             <div class='row'>
               <div class='col-md-12'>
-                <b>Programação</b>
+                <b>
+                  <span class="pt-br">
+                    Programação:
+                  </span>
+                  <span class="en">
+                    Programming:
+                  </span>
+                </b>
               </div>
             </div>
             <div class='row'>
               <div class='col-md-4'>
                 Ruby on Rails:
               </div>
-              <div class='col-md-8'>
-                <div class='w3-light-grey'>
-                  <div class='w3-grey' style='height:18px;width:90%'></div>
-                </div>
+              <div class="bar">
+                <span style="width:90%"><span class="progress"></span></span>
               </div>
             </div>
             <div class='row'>
               <div class='col-md-4'>
                 Git:
               </div>
-              <div class='col-md-8'>
-                <div class='w3-light-grey'>
-                  <div class='w3-grey' style='height:18px;width:80%'></div>
-                </div>
+              <div class="bar">
+                <span style="width:80%"><span class="progress"></span></span>
               </div>
             </div>
             <div class='row'>
               <div class='col-md-4'>
                 PostgreSQL:
               </div>
-              <div class='col-md-8'>
-                <div class='w3-light-grey'>
-                  <div class='w3-grey' style='height:18px;width:80%'></div>
-                </div>
+              <div class="bar">
+                <span style="width:80%"><span class="progress"></span></span>
               </div>
             </div>
             <div class='row'>
               <div class='col-md-4'>
                 Javascript/Jquery/Ajax:
               </div>
-              <div class='col-md-8'>
-                <div class='w3-light-grey'>
-                  <div class='w3-grey' style='height:18px;width:80%'></div>
-                </div>
+              <div class="bar">
+                <span style="width:80%"><span class="progress"></span></span>
               </div>
             </div>
             <div class='row'>
               <div class='col-md-4'>
                 Shell Script:
               </div>
-              <div class='col-md-8'>
-                <div class='w3-light-grey'>
-                  <div class='w3-grey' style='height:18px;width:70%'></div>
-                </div>
+              <div class="bar">
+                <span style="width:70%"><span class="progress"></span></span>
               </div>
             </div>
             <div class='row'>
               <div class='col-md-4'>
                 Python:
               </div>
-              <div class='col-md-8'>
-                <div class='w3-light-grey'>
-                  <div class='w3-grey' style='height:18px;width:40%'></div>
-                </div>
+              <div class="bar">
+                <span style="width:40%"><span class="progress"></span></span>
               </div>
             </div>
             <div class='row'>
               <div class='col-md-12'>
-                <b>Web Design</b>
+                <b>
+                  Web Design:
+                </b>
               </div>
             </div>
             <div class='row'>
               <div class='col-md-4'>
                 HTML:
               </div>
-              <div class='col-md-8'>
-                <div class='w3-light-grey'>
-                  <div class='w3-grey' style='height:18px;width:90%'></div>
-                </div>
+              <div class="bar">
+                <span style="width:90%"><span class="progress"></span></span>
               </div>
             </div>
             <div class='row'>
               <div class='col-md-4'>
                 CSS:
               </div>
-              <div class='col-md-8'>
-                <div class='w3-light-grey'>
-                  <div class='w3-grey' style='height:18px;width:70%'></div>
-                </div>
+              <div class="bar">
+                <span style="width:70%"><span class="progress"></span></span>
               </div>
             </div>
             <div class='row'>
               <div class='col-md-4'>
                 Bootstrap:
               </div>
-              <div class='col-md-8'>
-                <div class='w3-light-grey'>
-                  <div class='w3-grey' style='height:18px;width:80%'></div>
-                </div>
+              <div class="bar">
+                <span style="width:80%"><span class="progress"></span></span>
               </div>
             </div>
             <div class='row'>
               <div class='col-md-12'>
-                <b>Design Gráfico:</b>
+                <b>
+                  <span class="pt-br">
+                    Design Gráfico:
+                  </span>
+                  <span class="en">
+                    Graphic design:
+                  </span>
+                </b>
               </div>
             </div>
             <div class='row'>
               <div class='col-md-4'>
                 Adobe Photoshop:
               </div>
-              <div class='col-md-8'>
-                <div class='w3-light-grey'>
-                  <div class='w3-grey' style='height:18px;width:60%'></div>
-                </div>
+              <div class="bar">
+                <span style="width:60%"><span class="progress"></span></span>
               </div>
             </div>
             <div class='row'>
               <div class='col-md-4'>
                 Autodesk Maya:
               </div>
-              <div class='col-md-8'>
-                <div class='w3-light-grey'>
-                  <div class='w3-grey' style='height:18px;width:40%'></div>
-                </div>
+              <div class="bar">
+                <span style="width:40%"><span class="progress"></span></span>
               </div>
             </div>
             <div class='row'>
               <div class='col-md-4'>
                 GIMP:
               </div>
-              <div class='col-md-8'>
-                <div class='w3-light-grey'>
-                  <div class='w3-grey' style='height:18px;width:70%'></div>
-                </div>
+              <div class="bar">
+                <span style="width:70%"><span class="progress"></span></span>
               </div>
             </div>
             <div class='row'>
               <div class='col-md-12'>
-                <b>Sistemas Operacionais:</b>
+                <b>
+                  <span class="pt-br">
+                    Sistemas Operacionais:
+                  </span>
+                  <span class="en">
+                    Operational systems:
+                  </span>
+                </b>
               </div>
             </div>
             <div class='row'>
               <div class='col-md-4'>
                 Ubuntu:
               </div>
-              <div class='col-md-8'>
-                <div class='w3-light-grey'>
-                  <div class='w3-grey' style='height:18px;width:80%'></div>
-                </div>
+              <div class="bar">
+                <span style="width:80%"><span class="progress"></span></span>
               </div>
             </div>
             <div class='row'>
               <div class='col-md-4'>
                 Debian:
               </div>
-              <div class='col-md-8'>
-                <div class='w3-light-grey'>
-                  <div class='w3-grey' style='height:18px;width:60%'></div>
-                </div>
+              <div class="bar">
+                <span style="width:60%"><span class="progress"></span></span>
               </div>
             </div>
             <div class='row'>
               <div class='col-md-4'>
                 Windows:
               </div>
-              <div class='col-md-8'>
-                <div class='w3-light-grey'>
-                  <div class='w3-grey' style='height:18px;width:50%'></div>
-                </div>
+              <div class="bar">
+                <span style="width:50%"><span class="progress"></span></span>
               </div>
             </div>
             <div class='row'>
               <div class='col-md-4'>
                 Windows Server:
               </div>
-              <div class='col-md-8'>
-                <div class='w3-light-grey'>
-                  <div class='w3-grey' style='height:18px;width:50%'></div>
-                </div>
+              <div class="bar">
+                <span style="width:50%"><span class="progress"></span></span>
               </div>
             </div>
             <div class='row'>
               <div class='col-md-12'>
-                <b>Outros:</b>
+                <b>
+                  <span class="pt-br">
+                    Outros:
+                  </span>
+                  <span class="en">
+                    Others:
+                  </span>
+                </b>
               </div>
             </div>
             <div class='row'>
               <div class='col-md-4'>
                 Microsoft Office:
               </div>
-              <div class='col-md-8'>
-                <div class='w3-light-grey'>
-                  <div class='w3-grey' style='height:18px;width:60%'></div>
-                </div>
+              <div class="bar">
+                <span style="width:60%"><span class="progress"></span></span>
               </div>
             </div>
             <div class='row'>
               <div class='col-md-4'>
                 GroupPolicyObjects:
               </div>
-              <div class='col-md-8'>
-                <div class='w3-light-grey'>
-                  <div class='w3-grey' style='height:18px;width:40%'></div>
-                </div>
+              <div class="bar">
+                <span style="width:40%"><span class="progress"></span></span>
               </div>
             </div>
             <div class='row'>
               <div class='col-md-4'>
                 Active Directory:
               </div>
-              <div class='col-md-8'>
-                <div class='w3-light-grey'>
-                  <div class='w3-grey' style='height:18px;width:40%'></div>
-                </div>
+              <div class="bar">
+                <span style="width:40%"><span class="progress"></span></span>
               </div>
             </div>
             <div class='row'>
               <div class='col-md-4'>
                 Switch Cisco:
               </div>
-              <div class='col-md-8'>
-                <div class='w3-light-grey'>
-                  <div class='w3-grey' style='height:18px;width:40%'></div>
-                </div>
+              <div class="bar">
+                <span style="width:40%"><span class="progress"></span></span>
               </div>
             </div>
             <div class='row'>
               <div class='col-md-4'>
                 Router Cisco:
               </div>
-              <div class='col-md-8'>
-                <div class='w3-light-grey'>
-                  <div class='w3-grey' style='height:18px;width:40%'></div>
-                </div>
+              <div class="bar">
+                <span style="width:40%"><span class="progress"></span></span>
               </div>
             </div>
             <div class='row'>
               <div class='col-md-4'>
-                Serviços Linux:
+                <span class="pt-br">
+                  Serviços Linux:
+                </span>
+                <span class="en">
+                  Linux Services:
+                </span>
               </div>
-              <div class='col-md-8'>
-                <div class='w3-light-grey'>
-                  <div class='w3-grey' style='height:18px;width:80%'></div>
-                </div>
+              <div class="bar">
+                <span style="width:80%"><span class="progress"></span></span>
               </div>
             </div>
           </div>
@@ -575,4 +686,18 @@
     </div>
 
   </body>
+  <script type="text/javascript">
+    $('#language').change(function(){
+      var lang = $('#language').val();
+      if (lang == 'PT-BR') {
+        $('.en').hide();
+        $('.pt-br').show();
+      } else {
+        $('.pt-br').hide();
+        $('.en').show();
+
+      }
+    });
+
+  </script>
 </html>
